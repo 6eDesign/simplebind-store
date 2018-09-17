@@ -28,7 +28,6 @@ function observe(o, callback) {
   return buildProxy('', o);
 }
 
-merge({},{something:true});
 function store(obj,opts) { 
   if(!(this instanceof store)) return new store(obj,opts); 
   opts = opts || {};

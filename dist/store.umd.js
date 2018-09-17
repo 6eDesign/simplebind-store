@@ -177,11 +177,18 @@
 	  return ProxyPolyfill;
 	};
 
+	var proxy$1 = /*#__PURE__*/Object.freeze({
+		default: proxy,
+		__moduleExports: proxy
+	});
+
+	var require$$0 = ( proxy$1 && proxy ) || proxy$1;
+
 	(function(scope) {
 	  if (scope['Proxy']) {
 	    return;
 	  }
-	  scope.Proxy = proxy();
+	  scope.Proxy = require$$0();
 	  scope.Proxy['revocable'] = scope.Proxy.revocable;
 	})(
 	  ('undefined' !== typeof process &&
@@ -219,7 +226,6 @@
 	  return buildProxy('', o);
 	}
 
-	merge({},{something:true});
 	function store(obj,opts) { 
 	  if(!(this instanceof store)) return new store(obj,opts); 
 	  opts = opts || {};

@@ -1,7 +1,7 @@
 import 'proxy-polyfill';
 import isEqual from './isEqual';
 import observe from './observe';
-merge({},{something:true});
+
 export default function store(obj,opts) { 
   if(!(this instanceof store)) return new store(obj,opts); 
   opts = opts || {};
