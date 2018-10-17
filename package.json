@@ -20,7 +20,8 @@
     "build": "env buildTarget=prod node_modules/.bin/rollup -c",
     "dev": "node_modules/.bin/rollup -c -w",
     "test": "npm run pretest && sh scripts/runTests.sh",
-    "pretest": "npm run build"
+    "pretest": "npm run build",
+    "prepare": "npm run build"
   },
   "files": [
     "dist"

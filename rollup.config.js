@@ -12,9 +12,9 @@ let plugins = [
 	buble()
 ]; 
 
-// if(isProd) { 
-// 	plugins.push(uglify());
-// }
+if(isProd) { 
+	plugins.push(uglify());
+}
 
 export default [
 	// browser-friendly UMD build
